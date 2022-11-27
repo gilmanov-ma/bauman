@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Прогноз размера сварного шва </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+<form action="{{url_for('main')}}" method="POST">
+<fieldset>
+
+    <legend> Введите значения </legend>
+    <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">IW</span>
+    <input name="IW" type="number step=0.1" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">IF</span>
+    <input name="IF" type="number step=0.1" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">VW</span>
+    <input name="VW" type="number step=0.1" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">FP</span>
+    <input name="FP" type="number step=0.1" required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary btn-lg"> Предсказать </button>
+</fieldset>
+    </form>
+    <br>
+    <br>
+<div>
+    <h2>Размеры шва (width, depth) - {{result}}</h2>
+</div>
+
+</body>
+</html>
